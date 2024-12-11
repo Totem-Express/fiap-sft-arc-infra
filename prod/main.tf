@@ -1,5 +1,5 @@
 module "prod" {
-  source = "../../infra"
+  source = "../infra"
 
   prefix       = "totem_express"
   cluster_name = "8soat"
