@@ -87,7 +87,7 @@ resource "aws_eks_node_group" "node-group" {
   node_group_name = "${var.prefix}-ng"
   node_role_arn   = data.aws_iam_role.labrole.arn
   subnet_ids      = aws_subnet.subnets[*].id
-  instance_types  = ["t3a.medium"]
+  instance_types  = ["t2.micro"]
 
   scaling_config {
     desired_size = 1
