@@ -53,7 +53,6 @@ jobs:
           echo 'PLAN_OUTPUT<<DELIMITADOR' >> "$GITHUB_ENV"
           echo "$(terraform plan -no-color -input=false)" >> "$GITHUB_ENV"
           echo 'DELIMITADOR' >> "$GITHUB_ENV"
-        continue-on-error: true
 
       - name: Update Pull Request
         uses: actions/github-script@v7
