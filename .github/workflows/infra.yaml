@@ -24,7 +24,7 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        working-directory: ./prod
+        working-directory: ./infra
         run: |
           echo 'FMT_OUTPUT<<DELIMITADOR' >> "$GITHUB_ENV"
           echo "$(terraform fmt -check)" >> "$GITHUB_ENV"
@@ -32,7 +32,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        working-directory: ./prod
+        working-directory: ./infra
         run: |
           echo 'INIT_OUTPUT<<DELIMITADOR' >> "$GITHUB_ENV"
           echo "$(terraform init)" >> "$GITHUB_ENV"
@@ -40,7 +40,7 @@ jobs:
           
       - name: Terraform Validate
         id: validate
-        working-directory: ./prod
+        working-directory: ./infra
         run: |
           echo 'VALIDATE_OUTPUT<<DELIMITADOR' >> "$GITHUB_ENV"
           echo "$(terraform validate -no-color)" >> "$GITHUB_ENV"
@@ -48,7 +48,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        working-directory: ./prod
+        working-directory: ./infra
         if: github.event_name == 'pull_request'
         run: |
           echo 'PLAN_OUTPUT<<DELIMITADOR' >> "$GITHUB_ENV"
@@ -111,5 +111,5 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        working-directory: ./prod
+        working-directory: ./infra
         run: terraform apply -auto-approve -input=false
