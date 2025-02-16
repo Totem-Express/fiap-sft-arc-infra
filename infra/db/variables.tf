@@ -69,7 +69,10 @@ variable "vpc_cidr" {
   type        = string
 }
 
-variable "eks_principal_arn" {
-  type    = string
-  default = "arn:aws:iam::924978846501:role/voclabs"
+variable "vpc_id" {
+  type = string
+}
+
+variable "subnets_ids" {
+  type = list(string)
 }
