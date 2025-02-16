@@ -4,32 +4,62 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "db_version" {
+variable "db_order_product_version" {
   description = "Database version"
   type        = string
 }
 
-variable "db_instance_name" {
+variable "db_order_product_instance_name" {
   description = "Database name"
   type        = string
 }
 
-variable "db_username" {
+variable "db_order_product_username" {
   description = "Database username"
   type        = string
 }
 
-variable "db_password" {
+variable "db_order_product_password" {
   description = "Database password"
   type        = string
 }
 
-variable "db_instance_class" {
+variable "db_order_product_instance_class" {
   description = "RDS instance type"
   type        = string
 }
 
-variable "db_allocated_storage" {
+variable "db_order_product_allocated_storage" {
+  description = "Allocated storage size in GB"
+  type        = number
+}
+
+variable "db_payments_version" {
+  description = "Database version"
+  type        = string
+}
+
+variable "db_payments_instance_name" {
+  description = "Database name"
+  type        = string
+}
+
+variable "db_payments_username" {
+  description = "Database username"
+  type        = string
+}
+
+variable "db_payments_password" {
+  description = "Database password"
+  type        = string
+}
+
+variable "db_payments_instance_class" {
+  description = "RDS instance type"
+  type        = string
+}
+
+variable "db_payments_allocated_storage" {
   description = "Allocated storage size in GB"
   type        = number
 }

@@ -27,12 +27,18 @@ module "db" {
   vpc_id               = module.vpc.vpc_id
   subnets_ids          = module.vpc.subnets_ids
   vpc_cidr             = module.vpc.vpc_cidr
-  db_password          = var.db_password
-  db_instance_name     = var.db_instance_name
-  db_instance_class    = var.db_instance_class
-  db_allocated_storage = var.db_allocated_storage
-  db_version           = var.db_version
-  db_username          = var.db_username
+  db_order_product_username          = var.db_order_product_username
+  db_order_product_password          = var.db_order_product_password
+  db_order_product_instance_name     = var.db_order_product_instance_name
+  db_order_product_instance_class    = var.db_order_product_instance_class
+  db_order_product_allocated_storage = var.db_order_product_allocated_storage
+  db_order_product_version           = var.db_order_product_version
+  db_payments_username          = var.db_payments_username
+  db_payments_password          = var.db_payments_password
+  db_payments_instance_name     = var.db_payments_instance_name
+  db_payments_instance_class    = var.db_payments_instance_class
+  db_payments_allocated_storage = var.db_payments_allocated_storage
+  db_payments_version           = var.db_payments_version
 }
 
 terraform {
