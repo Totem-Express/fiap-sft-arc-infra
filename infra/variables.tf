@@ -68,3 +68,8 @@ variable "vpc_cidr" {
   description = "CIDR block for the VPC"
   type        = string
 }
+
+variable "eks_principal_arn" {
+  type    = string
+  default = "arn:aws:iam::924978846501:role/voclabs"
+}
