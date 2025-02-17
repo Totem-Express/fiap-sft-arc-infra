@@ -47,6 +47,14 @@ resource "aws_eks_access_entry" "access-entry" {
   type              = "STANDARD"
 }
 
-resource "aws_ecr_repository" "repository" {
-  name = var.prefix
+resource "aws_ecr_repository" "ecr_order_product_repository" {
+  name = var.ecr_order_product_registry
+}
+
+resource "aws_ecr_repository" "ecr_payments_repository" {
+  name = var.ecr_payments_registry
+}
+
+resource "aws_ecr_repository" "ecr_users_repository" {
+  name = var.ecr_users_registry
 }
