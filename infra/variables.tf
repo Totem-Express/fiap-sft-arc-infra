@@ -71,5 +71,5 @@ variable "vpc_cidr" {
 
 variable "eks_principal_arn" {
   type    = string
-  default = "arn:aws:iam::924978846501:role/voclabs"
+  default = "arn:aws:iam::037132183932:role/voclabs"
 }
