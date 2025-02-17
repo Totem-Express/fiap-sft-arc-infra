@@ -3,6 +3,21 @@ variable "prefix" {
   default = "totem_express"
 }
 
+variable "ecr_order_product_registry" {
+  type = string
+  default = "totem_express_order_product"
+}
+
+variable "ecr_payments_registry" {
+  type = string
+  default = "totem_express_payments"
+}
+
+variable "ecr_users_registry" {
+  type = string
+  default = "totem_express_users"
+}
+
 variable "cluster_name" {
   type    = string
   default = "8soat"
